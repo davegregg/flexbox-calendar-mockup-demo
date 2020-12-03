@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 2rem;
+    --cell-width: 2rem;
+    --cell-height: 2rem;
+}
+
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
+}
+
+.cell {
+    width: var(--cell-width);
+    height: var(--cell-height);
+    outline: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.calc-buttons {
+    display: flex;
+}
+
+.big-cell {
+    width: calc(var(--cell-width) * 2);
+}
+
+.results {
+    height: calc(var(--cell-height) * 2);
+    width: calc(var(--cell-width) * 4);
+    background: rgb(41, 41, 41);
+}
+
+.top {
+    display: flex;
+}
+
+.top .cell {
+    background: darkgray;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(var(--cell-width) * 3);
+}
+
+.numbers .cell {
+    background: lightgray;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+}
+
+.operators .cell {
+    background: goldenrod;
+}
